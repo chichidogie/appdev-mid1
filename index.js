@@ -1,39 +1,39 @@
-// alert("Hello");
-
+// alert('Hello');
 // 1st step - Movement animation to happen
-const card = $('.card');
-const container = $('.container');
+const card = $('.card')[0];
+const container = $('.container'); 
 
 // 5th step - all items
 const photo = $('.photo img');
 const title = $('.title');
-const social = $('.social');
-const info = $('.info h4');
-const profile = $('.profile');
+const social= $('.social');
+const info= $('.info h4');
+const profile= $('.profile');
 
 // 2nd step - Moving animation event
 container.on('mousemove', (e) => {
     let xAxis = (window.innerWidth / 2 - e.pageX) / 20; //rotating the element into x axis
     let yAxis = (window.innerWidth / 2 - e.pageY) / 20; //rotating the element into y axis
-    card.css('transform', `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`);
+    card.style.transform  = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
 // 4th step - Adding animation in
 container.on('mouseenter', e => {
-    card.css('transform', 'none');
+    card.style.transform = 'none';
     // Popout animation for all items
-    photo.css('transform', 'translateZ(50px)');
-    title.css('transform', 'translateZ(50px)');
-    social.css('transform', 'translateZ(50px)');
-    info.css('transform', 'translateZ(50px)');
-    profile.css('transform', 'translateZ(50px)');
+    photo.style.transform = 'translateZ(50px)';
+    title.style.transform = 'translateZ(50px)';
+    social.style.transform = 'translateZ(50px)';
+    info.style.transform = 'translateZ(50px)';
+    profile.style.transform = 'translateZ(50px)';
 });
 
 // 3rd step - Removing animation in
 container.on('mouseleave', e => {
-    card.css('transition', 'all 0.1s ease');
-    card.css('transform', 'rotateY(0deg) rotateX(0deg)');
+    card.style.transform = 'all 0.5s ease';
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
+
 /* This code snippet demonstrates a 3D card animation effect using jQuery. The animation involves rotating a card element based on the mouse movement within a container. 
 Additionally, it includes pop-out animations for various elements when the mouse enters the container.
 
