@@ -31,7 +31,7 @@ container.on('mouseenter', e => {
 
 // 3rd step - Removing animation in
 container.on('mouseleave', e => {
-    card.css('transition', 'all 0.5s ease');
+    card.css('transition', 'all 0.1s ease');
     card.css('transform', 'rotateY(0deg) rotateX(0deg)');
 });
 /* This code snippet demonstrates a 3D card animation effect using jQuery. The animation involves rotating a card element based on the mouse movement within a container. 
